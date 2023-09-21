@@ -1,0 +1,1204 @@
+{
+	"info": {
+		"_postman_id": "1f52079c-b5c3-4f4a-84c8-0826f987af37",
+		"name": "orderRoutes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29870922"
+	},
+	"item": [
+		{
+			"name": "Get All Orders",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1010/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1010",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Empty Orders",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1010/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1010",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2207"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"89f-6WcqDAxrI6XvcSrzMI4oF8StYtI\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Sep 2023 15:42:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"order_id\": 5,\n        \"user_id\": \"12\",\n        \"product_id\": \"23\",\n        \"order_date\": \"2023-09-12T09:25:49.130Z\",\n        \"quantity\": 34,\n        \"total_price\": \"45.00\",\n        \"order_status\": \"56\",\n        \"shipping_address\": \"57\",\n        \"payment_status\": \"58\"\n    },\n    {\n        \"order_id\": 6,\n        \"user_id\": null,\n        \"product_id\": null,\n        \"order_date\": \"2023-09-12T11:07:31.775Z\",\n        \"quantity\": null,\n        \"total_price\": null,\n        \"order_status\": null,\n        \"shipping_address\": null,\n        \"payment_status\": null\n    },\n    {\n        \"order_id\": 7,\n        \"user_id\": \"2\",\n        \"product_id\": \"4\",\n        \"order_date\": \"2023-09-12T14:50:57.545Z\",\n        \"quantity\": 100,\n        \"total_price\": \"1.00\",\n        \"order_status\": \"1\",\n        \"shipping_address\": \"1\",\n        \"payment_status\": \"1\"\n    },\n    {\n        \"order_id\": 8,\n        \"user_id\": \"1\",\n        \"product_id\": \"4\",\n        \"order_date\": \"2023-09-12T15:44:38.210Z\",\n        \"quantity\": 10,\n        \"total_price\": \"10.00\",\n        \"order_status\": \"23\",\n        \"shipping_address\": \"21\",\n        \"payment_status\": \"34\"\n    },\n    {\n        \"order_id\": 9,\n        \"user_id\": \"1\",\n        \"product_id\": \"4\",\n        \"order_date\": \"2023-09-12T15:45:35.167Z\",\n        \"quantity\": 20,\n        \"total_price\": \"10.00\",\n        \"order_status\": \"23\",\n        \"shipping_address\": \"21\",\n        \"payment_status\": \"34\"\n    },\n    {\n        \"order_id\": 10,\n        \"user_id\": \"1\",\n        \"product_id\": \"2\",\n        \"order_date\": \"2023-09-16T01:16:24.359Z\",\n        \"quantity\": 2,\n        \"total_price\": \"3.00\",\n        \"order_status\": \"2\",\n        \"shipping_address\": \"4\",\n        \"payment_status\": \"5\"\n    },\n    {\n        \"order_id\": 11,\n        \"user_id\": \"64f9f62c69f20fb26110ed4e\",\n        \"product_id\": \"1\",\n        \"order_date\": \"2023-09-16T01:54:09.675Z\",\n        \"quantity\": 20,\n        \"total_price\": \"3.00\",\n        \"order_status\": \"2\",\n        \"shipping_address\": \"4\",\n        \"payment_status\": \"yes\"\n    },\n    {\n        \"order_id\": 12,\n        \"user_id\": \"64f9f62c69f20fb26110ed4e\",\n        \"product_id\": \"1\",\n        \"order_date\": \"2023-09-16T01:55:48.651Z\",\n        \"quantity\": 20,\n        \"total_price\": \"3.00\",\n        \"order_status\": \"2\",\n        \"shipping_address\": \"4\",\n        \"payment_status\": \"yes yes\"\n    },\n    {\n        \"order_id\": 13,\n        \"user_id\": \"64f9f62c69f20fb26110ed4e\",\n        \"product_id\": \"1\",\n        \"order_date\": \"2023-09-16T02:09:33.459Z\",\n        \"quantity\": 20,\n        \"total_price\": \"3.00\",\n        \"order_status\": \"2\",\n        \"shipping_address\": \"4\",\n        \"payment_status\": \"yes yes yes\"\n    },\n    {\n        \"order_id\": 14,\n        \"user_id\": \"64f9f62c69f20fb26110ed4e\",\n        \"product_id\": \"1\",\n        \"order_date\": \"2023-09-16T02:10:21.614Z\",\n        \"quantity\": 20,\n        \"total_price\": \"3.00\",\n        \"order_status\": \"2\",\n        \"shipping_address\": \"4\",\n        \"payment_status\": \"yes yes yes\"\n    },\n    {\n        \"order_id\": 15,\n        \"user_id\": \"64f9f62c69f20fb26110ed4e\",\n        \"product_id\": \"1\",\n        \"order_date\": \"2023-09-16T02:10:39.385Z\",\n        \"quantity\": 20,\n        \"total_price\": \"3.00\",\n        \"order_status\": \"2\",\n        \"shipping_address\": \"4\",\n        \"payment_status\": \"yes yes yes yes\"\n    }\n]"
+				},
+				{
+					"name": "Orders Available",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1010/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1010",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2207"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"89f-6WcqDAxrI6XvcSrzMI4oF8StYtI\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Sep 2023 15:43:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"order_id\": 5,\n        \"user_id\": \"12\",\n        \"product_id\": \"23\",\n        \"order_date\": \"2023-09-12T09:25:49.130Z\",\n        \"quantity\": 34,\n        \"total_price\": \"45.00\",\n        \"order_status\": \"56\",\n        \"shipping_address\": \"57\",\n        \"payment_status\": \"58\"\n    },\n    {\n        \"order_id\": 6,\n        \"user_id\": null,\n        \"product_id\": null,\n        \"order_date\": \"2023-09-12T11:07:31.775Z\",\n        \"quantity\": null,\n        \"total_price\": null,\n        \"order_status\": null,\n        \"shipping_address\": null,\n        \"payment_status\": null\n    },\n    {\n        \"order_id\": 7,\n        \"user_id\": \"2\",\n        \"product_id\": \"4\",\n        \"order_date\": \"2023-09-12T14:50:57.545Z\",\n        \"quantity\": 100,\n        \"total_price\": \"1.00\",\n        \"order_status\": \"1\",\n        \"shipping_address\": \"1\",\n        \"payment_status\": \"1\"\n    },\n    {\n        \"order_id\": 8,\n        \"user_id\": \"1\",\n        \"product_id\": \"4\",\n        \"order_date\": \"2023-09-12T15:44:38.210Z\",\n        \"quantity\": 10,\n        \"total_price\": \"10.00\",\n        \"order_status\": \"23\",\n        \"shipping_address\": \"21\",\n        \"payment_status\": \"34\"\n    },\n    {\n        \"order_id\": 9,\n        \"user_id\": \"1\",\n        \"product_id\": \"4\",\n        \"order_date\": \"2023-09-12T15:45:35.167Z\",\n        \"quantity\": 20,\n        \"total_price\": \"10.00\",\n        \"order_status\": \"23\",\n        \"shipping_address\": \"21\",\n        \"payment_status\": \"34\"\n    },\n    {\n        \"order_id\": 10,\n        \"user_id\": \"1\",\n        \"product_id\": \"2\",\n        \"order_date\": \"2023-09-16T01:16:24.359Z\",\n        \"quantity\": 2,\n        \"total_price\": \"3.00\",\n        \"order_status\": \"2\",\n        \"shipping_address\": \"4\",\n        \"payment_status\": \"5\"\n    },\n    {\n        \"order_id\": 11,\n        \"user_id\": \"64f9f62c69f20fb26110ed4e\",\n        \"product_id\": \"1\",\n        \"order_date\": \"2023-09-16T01:54:09.675Z\",\n        \"quantity\": 20,\n        \"total_price\": \"3.00\",\n        \"order_status\": \"2\",\n        \"shipping_address\": \"4\",\n        \"payment_status\": \"yes\"\n    },\n    {\n        \"order_id\": 12,\n        \"user_id\": \"64f9f62c69f20fb26110ed4e\",\n        \"product_id\": \"1\",\n        \"order_date\": \"2023-09-16T01:55:48.651Z\",\n        \"quantity\": 20,\n        \"total_price\": \"3.00\",\n        \"order_status\": \"2\",\n        \"shipping_address\": \"4\",\n        \"payment_status\": \"yes yes\"\n    },\n    {\n        \"order_id\": 13,\n        \"user_id\": \"64f9f62c69f20fb26110ed4e\",\n        \"product_id\": \"1\",\n        \"order_date\": \"2023-09-16T02:09:33.459Z\",\n        \"quantity\": 20,\n        \"total_price\": \"3.00\",\n        \"order_status\": \"2\",\n        \"shipping_address\": \"4\",\n        \"payment_status\": \"yes yes yes\"\n    },\n    {\n        \"order_id\": 14,\n        \"user_id\": \"64f9f62c69f20fb26110ed4e\",\n        \"product_id\": \"1\",\n        \"order_date\": \"2023-09-16T02:10:21.614Z\",\n        \"quantity\": 20,\n        \"total_price\": \"3.00\",\n        \"order_status\": \"2\",\n        \"shipping_address\": \"4\",\n        \"payment_status\": \"yes yes yes\"\n    },\n    {\n        \"order_id\": 15,\n        \"user_id\": \"64f9f62c69f20fb26110ed4e\",\n        \"product_id\": \"1\",\n        \"order_date\": \"2023-09-16T02:10:39.385Z\",\n        \"quantity\": 20,\n        \"total_price\": \"3.00\",\n        \"order_status\": \"2\",\n        \"shipping_address\": \"4\",\n        \"payment_status\": \"yes yes yes yes\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Specific Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1010/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1010",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Order Not Found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1010/order/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1010",
+							"path": [
+								"order",
+								"1"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1d-An8tqha6RuYAk380OD6ltPX0/Uw\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Sep 2023 15:44:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"order not found\"\n}"
+				},
+				{
+					"name": "Orders Available",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1010/order/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1010",
+							"path": [
+								"order",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "191"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bf-JLY7/FJ7E+mQX4SDbnW7Iv0EPaQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Sep 2023 15:46:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"order_id\": 5,\n        \"user_id\": \"12\",\n        \"product_id\": \"23\",\n        \"order_date\": \"2023-09-12T09:25:49.130Z\",\n        \"quantity\": 34,\n        \"total_price\": \"45.00\",\n        \"order_status\": \"56\",\n        \"shipping_address\": \"57\",\n        \"payment_status\": \"58\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Add New Orders",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"johndoe@example.com\",\n    \"passWd\" : \"SecurePassword123\",\n    \"firstName\" : \"John\",\n    \"lastName\" : \"Doe\",\n    \"address\" : \"123 Main Street, Apt 4B, Cityville, State\",\n    \"phoneNo\" : \"+1 (555) 555-5555\",\n    \"userRole\" : \"Customer\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Order With Valid userId and Valid productId And Quantity Available",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\" : \"650aa1f46e329fac3e79f850\",\n    \"product_id\" : \"2\",\n    \"quantity\" : \"1\",\n    \"total_price\" : \"10\",\n    \"order_status\" : \"completed\",\n    \"shipping_address\" : \"address 1\",\n    \"payment_status\" : \"paid\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1010/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1010",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2653"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a5d-oHo3VHE27DxvK2Zw1csRNNoiOJ4\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Sep 2023 17:03:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"order insert\",\n    \"results\": {\n        \"command\": \"INSERT\",\n        \"rowCount\": 1,\n        \"oid\": 0,\n        \"rows\": [\n            {\n                \"order_id\": 16,\n                \"user_id\": \"650aa1f46e329fac3e79f850\",\n                \"product_id\": \"2\",\n                \"order_date\": \"2023-09-20T17:03:47.306Z\",\n                \"quantity\": 1,\n                \"total_price\": \"10.00\",\n                \"order_status\": \"completed\",\n                \"shipping_address\": \"address 1\",\n                \"payment_status\": \"paid\"\n            }\n        ],\n        \"fields\": [\n            {\n                \"name\": \"order_id\",\n                \"tableID\": 16407,\n                \"columnID\": 1,\n                \"dataTypeID\": 23,\n                \"dataTypeSize\": 4,\n                \"dataTypeModifier\": -1,\n                \"format\": \"text\"\n            },\n            {\n                \"name\": \"user_id\",\n                \"tableID\": 16407,\n                \"columnID\": 2,\n                \"dataTypeID\": 25,\n                \"dataTypeSize\": -1,\n                \"dataTypeModifier\": -1,\n                \"format\": \"text\"\n            },\n            {\n                \"name\": \"product_id\",\n                \"tableID\": 16407,\n                \"columnID\": 3,\n                \"dataTypeID\": 25,\n                \"dataTypeSize\": -1,\n                \"dataTypeModifier\": -1,\n                \"format\": \"text\"\n            },\n            {\n                \"name\": \"order_date\",\n                \"tableID\": 16407,\n                \"columnID\": 4,\n                \"dataTypeID\": 1114,\n                \"dataTypeSize\": 8,\n                \"dataTypeModifier\": -1,\n                \"format\": \"text\"\n            },\n            {\n                \"name\": \"quantity\",\n                \"tableID\": 16407,\n                \"columnID\": 5,\n                \"dataTypeID\": 23,\n                \"dataTypeSize\": 4,\n                \"dataTypeModifier\": -1,\n                \"format\": \"text\"\n            },\n            {\n                \"name\": \"total_price\",\n                \"tableID\": 16407,\n                \"columnID\": 6,\n                \"dataTypeID\": 1700,\n                \"dataTypeSize\": -1,\n                \"dataTypeModifier\": 655366,\n                \"format\": \"text\"\n            },\n            {\n                \"name\": \"order_status\",\n                \"tableID\": 16407,\n                \"columnID\": 7,\n                \"dataTypeID\": 1043,\n                \"dataTypeSize\": -1,\n                \"dataTypeModifier\": 259,\n                \"format\": \"text\"\n            },\n            {\n                \"name\": \"shipping_address\",\n                \"tableID\": 16407,\n                \"columnID\": 8,\n                \"dataTypeID\": 25,\n                \"dataTypeSize\": -1,\n                \"dataTypeModifier\": -1,\n                \"format\": \"text\"\n            },\n            {\n                \"name\": \"payment_status\",\n                \"tableID\": 16407,\n                \"columnID\": 9,\n                \"dataTypeID\": 25,\n                \"dataTypeSize\": -1,\n                \"dataTypeModifier\": -1,\n                \"format\": \"text\"\n            }\n        ],\n        \"_parsers\": [\n            null,\n            null,\n            null,\n            null,\n            null,\n            null,\n            null,\n            null,\n            null\n        ],\n        \"_types\": {\n            \"_types\": {\n                \"arrayParser\": {},\n                \"builtins\": {\n                    \"BOOL\": 16,\n                    \"BYTEA\": 17,\n                    \"CHAR\": 18,\n                    \"INT8\": 20,\n                    \"INT2\": 21,\n                    \"INT4\": 23,\n                    \"REGPROC\": 24,\n                    \"TEXT\": 25,\n                    \"OID\": 26,\n                    \"TID\": 27,\n                    \"XID\": 28,\n                    \"CID\": 29,\n                    \"JSON\": 114,\n                    \"XML\": 142,\n                    \"PG_NODE_TREE\": 194,\n                    \"SMGR\": 210,\n                    \"PATH\": 602,\n                    \"POLYGON\": 604,\n                    \"CIDR\": 650,\n                    \"FLOAT4\": 700,\n                    \"FLOAT8\": 701,\n                    \"ABSTIME\": 702,\n                    \"RELTIME\": 703,\n                    \"TINTERVAL\": 704,\n                    \"CIRCLE\": 718,\n                    \"MACADDR8\": 774,\n                    \"MONEY\": 790,\n                    \"MACADDR\": 829,\n                    \"INET\": 869,\n                    \"ACLITEM\": 1033,\n                    \"BPCHAR\": 1042,\n                    \"VARCHAR\": 1043,\n                    \"DATE\": 1082,\n                    \"TIME\": 1083,\n                    \"TIMESTAMP\": 1114,\n                    \"TIMESTAMPTZ\": 1184,\n                    \"INTERVAL\": 1186,\n                    \"TIMETZ\": 1266,\n                    \"BIT\": 1560,\n                    \"VARBIT\": 1562,\n                    \"NUMERIC\": 1700,\n                    \"REFCURSOR\": 1790,\n                    \"REGPROCEDURE\": 2202,\n                    \"REGOPER\": 2203,\n                    \"REGOPERATOR\": 2204,\n                    \"REGCLASS\": 2205,\n                    \"REGTYPE\": 2206,\n                    \"UUID\": 2950,\n                    \"TXID_SNAPSHOT\": 2970,\n                    \"PG_LSN\": 3220,\n                    \"PG_NDISTINCT\": 3361,\n                    \"PG_DEPENDENCIES\": 3402,\n                    \"TSVECTOR\": 3614,\n                    \"TSQUERY\": 3615,\n                    \"GTSVECTOR\": 3642,\n                    \"REGCONFIG\": 3734,\n                    \"REGDICTIONARY\": 3769,\n                    \"JSONB\": 3802,\n                    \"REGNAMESPACE\": 4089,\n                    \"REGROLE\": 4096\n                }\n            },\n            \"text\": {},\n            \"binary\": {}\n        },\n        \"RowCtor\": null,\n        \"rowAsArray\": false,\n        \"_prebuiltEmptyResultObject\": {\n            \"order_id\": null,\n            \"user_id\": null,\n            \"product_id\": null,\n            \"order_date\": null,\n            \"quantity\": null,\n            \"total_price\": null,\n            \"order_status\": null,\n            \"shipping_address\": null,\n            \"payment_status\": null\n        }\n    }\n}"
+				},
+				{
+					"name": "Add Order With Valid userId and Valid productId And Quantity Not Available",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\" : \"650aa1f46e329fac3e79f850\",\n    \"product_id\" : \"2\",\n    \"quantity\" : \"12\",\n    \"total_price\" : \"10\",\n    \"order_status\" : \"completed\",\n    \"shipping_address\" : \"address 1\",\n    \"payment_status\" : \"paid\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1010/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1010",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "33"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"21-nOS89nUUpt+nPLriiafPMA0bBC4\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Sep 2023 17:07:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Not enough quantity\"\n}"
+				},
+				{
+					"name": "Add Order With Invalid userId and Valid productId And Quantity Available Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\" : \"650aa1f46e329fac3e79f851\",\n    \"product_id\" : \"2\",\n    \"quantity\" : \"1\",\n    \"total_price\" : \"10\",\n    \"order_status\" : \"completed\",\n    \"shipping_address\" : \"address 1\",\n    \"payment_status\" : \"paid\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1010/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1010",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"25-d4Oh3rO5bueVhSvGxTGy+xYODWg\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Sep 2023 17:12:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"UserId is not available\"\n}"
+				},
+				{
+					"name": "Add Order With Valid userId and Invalid productId And Quantity Available",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\" : \"650aa1f46e329fac3e79f850\",\n    \"product_id\" : \"9\",\n    \"quantity\" : \"1\",\n    \"total_price\" : \"10\",\n    \"order_status\" : \"completed\",\n    \"shipping_address\" : \"address 1\",\n    \"payment_status\" : \"paid\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1010/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1010",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"28-L7SxQUAPKfVWmUY2KEaBzlX5Gfw\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Sep 2023 17:13:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"ProductId is not available\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update A Orders",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"newAddress\": \"new address\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/650aa7afebd9a5f34bd6d176",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"650aa7afebd9a5f34bd6d176"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Empty Parameter orderId",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"newShippingAddress\": \"new address\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1010/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1010",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "33"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"21-j0CQ1nlha5JFXTEoGDnnHg2XBY0\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Sep 2023 17:15:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"message\": \"Not found\"\n    }\n}"
+				},
+				{
+					"name": "Valid Orders One Value",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"newPayment_status\" : \"paid new\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1010/order/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1010",
+							"path": [
+								"order",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b-R++nPNKEyDd/BswGdFVacywOmuk\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Sep 2023 02:04:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"order updated\"\n}"
+				},
+				{
+					"name": "Valid Orders Multiple Values",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"newUser_id\" : \"650aa1f46e329fac3e79f850\",\n    \"newProduct_id\" : \"2\",\n    \"newQuantity\" : \"2000\",\n    \"newTotal_price\" : \"200000\",\n    \"newOrder_status\" : \"completed delivery\",\n    \"newShipping_address\" : \"new address\",\n    \"newPayment_status\" : \"paid\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1010/order/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1010",
+							"path": [
+								"order",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b-R++nPNKEyDd/BswGdFVacywOmuk\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Sep 2023 02:02:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"order updated\"\n}"
+				},
+				{
+					"name": "Invalid Orders One Value",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"newPayment_status\" : \"paid new\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1010/order/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1010",
+							"path": [
+								"order",
+								"1"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1d-An8tqha6RuYAk380OD6ltPX0/Uw\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Sep 2023 02:05:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"order not found\"\n}"
+				},
+				{
+					"name": "Invalid Orders Multiple Values",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"newUser_id\" : \"650aa1f46e329fac3e79f850\",\n    \"newProduct_id\" : \"2\",\n    \"newQuantity\" : \"2000\",\n    \"newTotal_price\" : \"200000\",\n    \"newOrder_status\" : \"completed delivery\",\n    \"newShipping_address\" : \"new address\",\n    \"newPayment_status\" : \"paid\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1010/order/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1010",
+							"path": [
+								"order",
+								"1"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1d-An8tqha6RuYAk380OD6ltPX0/Uw\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Sep 2023 02:06:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"order not found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete A Orders",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": [
+				{
+					"name": "Empty Parameter userId",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1010/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1010",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "33"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"21-j0CQ1nlha5JFXTEoGDnnHg2XBY0\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Sep 2023 08:43:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"message\": \"Not found\"\n    }\n}"
+				},
+				{
+					"name": "Parameter Valid orderId",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1010/order/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1010",
+							"path": [
+								"order",
+								"6"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b-Gd4AnAHm2pbTcVn7LEg5IhU8pVM\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Sep 2023 02:56:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"order deleted\"\n}"
+				},
+				{
+					"name": "Parameter Invalid productId",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1010/order/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1010",
+							"path": [
+								"order",
+								"20"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1d-An8tqha6RuYAk380OD6ltPX0/Uw\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Sep 2023 02:56:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"order not found\"\n}"
+				}
+			]
+		}
+	]
+}
